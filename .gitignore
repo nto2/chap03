@@ -8,6 +8,8 @@ target/
 .project
 .settings
 .springBeans
+.cache-main
+.cache-tests
 
 ### IntelliJ IDEA ###
 .idea
