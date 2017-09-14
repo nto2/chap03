@@ -104,6 +104,32 @@ public class DeptRepositoryTest {
 				.hasFieldOrPropertyWithValue("dname", "경리부");
 		
 	}
+	
+	@Test
+	public void findByDnameOrLoc() {
+		deptRepository.findAll().forEach(e -> {
+			System.out.println(e);
+		});
+		
+		deptRepository.findByDnameOrLoc("인사부","용인").forEach(e -> {
+			System.out.println(e);
+		});
+	}
+	
+	@Test
+	public void findByDeptnoGreaterThanOrderByDnameDesc() {
+		deptRepository.findByDeptnoGreaterThanOrderByDnameDesc(new BigInteger("20")).forEach(e-> {
+			System.out.println(e);
+		});
+		}
+	
+	@Test
+	public void findByDeptnoBetween() {
+		deptRepository.findByDeptnoBetween(new BigInteger("20"), new BigInteger("30")).forEach(e -> {
+			System.out.println(e);
+		});
 		
 	}
+	}
+
 
